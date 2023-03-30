@@ -22,7 +22,7 @@
                 android:id="@+id/text_view_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Title"
+                android:text="Заголовок"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
@@ -39,9 +39,36 @@
                 android:layout_width="20sp"
                 android:layout_height="20sp"
                 android:src="@drawable/fix_icon"
-                android:layout_marginTop="8sp"/>
+                android:layout_marginTop="8sp" />
 
         </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_view_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:padding="8sp"
+            android:text="Тело заметки"
+            android:textColor="@color/black"
+            android:maxLines="10"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:padding="8sp"
+            android:text="Дата"
+            android:textColor="@color/grey"
+            android:maxLines="10"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"/>
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
