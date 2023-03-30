@@ -62,6 +62,15 @@ public class MainActivity extends AppCompatActivity {
                 notesListAdapter.notifyDataSetChanged();
             }
         }
+        if(requestCode == 102) {
+            if (resultCode == Activity.RESULT_OK) {
+                Notes new_notes = (Notes) data.getSerializableExtra("note");
+                database.mainDao().update(new_notes.getId(), new_notes.getTitle(), new_notes.getNotes());
+                notes.clear();
+                notes.addAll(database.mainDao().getAll());
+                notesListAdapter.notifyDataSetChanged();
+            }
+        }
     }
 
     private void updateRecyclre(List<Notes> notes) {
@@ -74,6 +83,9 @@ public class MainActivity extends AppCompatActivity {
     private final NotesClickListener notesClickListener = new NotesClickListener() {
         @Override
         public void onClick(Notes notes) {
+            Intent intent = new Intent(MainActivity.this, NotesTakerActivity.class);
+            intent.putExtra("old_note", notes);
+            startActivityForResult(intent, 102);
 
         }
 
