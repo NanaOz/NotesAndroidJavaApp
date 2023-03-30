@@ -22,7 +22,7 @@
                 android:id="@+id/text_view_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Заголовок"
+                android:text="Тема"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
@@ -51,7 +51,7 @@
             android:textSize="14sp"
             android:textStyle="normal"
             android:padding="8sp"
-            android:text="Тело заметки"
+            android:text="Описание"
             android:textColor="@color/black"
             android:maxLines="10"/>
 

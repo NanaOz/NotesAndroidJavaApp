@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".NotesTakerActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_notes"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_view_save"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/save_icon"
+                android:padding="6sp"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/edit_text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Тема: "
+        android:textColorHint="@color/white"
+        android:padding="8sp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/edit_text_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Описание: "
+        android:textColorHint="@color/white"
+        android:padding="8sp"
+        android:textStyle="normal"
+        android:textSize="17sp"
+        android:textColor="@color/white"/>
+
+
+</LinearLayout>
+
